@@ -1,3 +1,6 @@
 import add_0
 
-add_0.add()
+if __name__ == '__main__':
+	a = 1
+	b = 2
+	add_0.add()
