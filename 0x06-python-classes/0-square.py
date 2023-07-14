@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-'''
-Module Documentation: Square
-'''
+""" Creating a square class """
+
 
 class Square:
-'''
-This an empty class called square
-'''
-	pass:
+    """ Creating a square class """
+    pass
