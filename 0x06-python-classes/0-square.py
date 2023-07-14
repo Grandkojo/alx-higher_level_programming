@@ -3,7 +3,7 @@
 Module Documentation: Square
 '''
 
-def Square:
+class Square:
 '''
 This an empty class called square
 '''
