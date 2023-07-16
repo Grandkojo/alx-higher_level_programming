@@ -3,5 +3,5 @@
 
 
 class Rectangle:
-	""" Creating a rectangle class """
-	pass
+    """ Creating a rectangle class """
+    pass
