@@ -7,8 +7,8 @@ class Rectangle:
     def __init__(self, width=0, height=0):
 	""" initiating class
 	Args:
-        width(int): width of rectangle
-	height(int): height of rectangle
+            width(int): width of rectangle
+	    height(int): height of rectangle
 	"""
 	self.__width = width
 	self.__height = height
@@ -29,12 +29,12 @@ class Rectangle:
 
     @property	
     def height(self):
-    	"""Height of rectangle"""
+    	""" Height of rectangle """
     	return (self.__height)
 
     @height.setter
     def height(self, value):
-    	"""Sets height of the rectangle to a value"""
+    	""" Sets height of the rectangle to a value """
     	if not isinstance(value, int):
     		raise TypeError("height must be an integer")
     	if value < 0:
