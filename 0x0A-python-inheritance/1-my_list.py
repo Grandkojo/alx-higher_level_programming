@@ -1,4 +1,5 @@
-s module inherits from the list class"""
+#!/usr/bin/python3
+"""This module inherits from the list class"""
 
 
 class MyList(list):
