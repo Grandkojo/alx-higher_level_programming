@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is a rectangle class"""
+"""THis is a rectangle class"""
 
 
 class Rectangle:
@@ -10,7 +10,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-	Rectangle.number_of_instance += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -62,7 +62,7 @@ class Rectangle:
         return res
 
     def __del__(self):
-        """the delete magic method is called when an instance is deleted"""
+        """the delete magic method"""
         print("Bye rectangle...")
-	if number_of_instances != 0:
-		Rectangle.number_of_instances -= 1
+        if Rectangle.number_of_instances != 0:
+            Rectangle.number_of_instances -= 1
