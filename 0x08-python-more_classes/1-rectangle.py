@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+
 """This module defines a rectangle class."""
 
 class Rectangle:
 	"""A rectangle class"""
 
-	def __int__(self, width=0, height=0):
+	def __init__(self, width=0, height=0):
 	"""Initialize a rectangle
 	Args:
 		width(int): width of rectangle
@@ -14,7 +15,7 @@ class Rectangle:
 	self.height = height
 
 	@property
-	def witdh(self):
+	def width(self):
 		"""Get the width of the rectangle"""
 		return self.__width
 
