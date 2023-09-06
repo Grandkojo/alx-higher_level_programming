@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""This module defines an rectangle class."""
+"""This module defines a rectangle class."""
 
 class Rectangle:
-	"""An rectangle class"""
+	"""A rectangle class"""
 
-	def _int__(self, width=0, height=0):
+	def __int__(self, width=0, height=0):
 	"""Initialize a rectangle
 	Args:
 		width(int): width of rectangle
