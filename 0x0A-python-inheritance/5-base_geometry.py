@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""This module contains an empty class"""
+"""This module has only one class"""
 
 
-class BaseGeometry:
-	"""An empty class created"""
-	pass
-
+class BaseGeometry():
+    """This class does nothing yet"""
+    pass
