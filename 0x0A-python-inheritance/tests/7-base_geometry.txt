@@ -1,0 +1,72 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> ds = __import__('7-base_geometry').__doc__
+>>> len(ds) > 1
+True
+>>> ds = __import__('7-base_geometry').BaseGeometry.__doc__
+>>> len(ds) > 1
+True
+>>> ds = __import__('7-base_geometry').BaseGeometry.area.__doc__
+>>> len(ds) > 1
+True
+>>> ds = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+>>> len(ds) > 1
+True
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+>>> bg.area(24)
+Traceback (most recent call last):
+...
+TypeError: area() takes 1 positional argument but 2 were given
+>>> bg.integer_validator('int', 1)
+>>> bg.integer_validator('int', -1)
+Traceback (most recent call last):
+...
+ValueError: int must be greater than 0
+>>> bg.integer_validator('int', 0)
+Traceback (most recent call last):
+...
+ValueError: int must be greater than 0
+>>> bg.integer_validator('string', "hello")
+Traceback (most recent call last):
+...
+TypeError: string must be an integer
+>>> bg.integer_validator('float', 1.5)
+Traceback (most recent call last):
+...
+TypeError: float must be an integer
+>>> bg.integer_validator('bool', False)
+Traceback (most recent call last):
+...
+TypeError: bool must be an integer
+>>> bg.integer_validator('list', [1, 2])
+Traceback (most recent call last):
+...
+TypeError: list must be an integer
+>>> bg.integer_validator('dict', {'1': 1, '2': 2})
+Traceback (most recent call last):
+...
+TypeError: dict must be an integer
+>>> bg.integer_validator('tuple', (1, 2))
+Traceback (most recent call last):
+...
+TypeError: tuple must be an integer
+>>> bg.integer_validator('byte', b"hello")
+Traceback (most recent call last):
+...
+TypeError: byte must be an integer
+>>> bg.integer_validator('set', {1, 2, 3})
+Traceback (most recent call last):
+...
+TypeError: set must be an integer
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> bg.integer_validator('int', 1, 2)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
