@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""This module contains only one function"""
+"""This module has one function"""
 
 
-def is_same_class(obj, a_class):
-    """Checks if the object is an instance of a class that inherited from the specified class"""
-    return issubclass(obj, a_class)
+def inherits_from(obj, a_class):
+    """checks inheritance of an obj"""
+    return issubclass(type(obj), a_class) and type(obj) is not a_class
+
