@@ -3,6 +3,6 @@
 
 
 def inherits_from(obj, a_class):
-    """checks inheritance of an obj"""
+    """checks inheritance of an obj either(directly or not directly)"""
     return issubclass(type(obj), a_class) and type(obj) is not a_class
 
