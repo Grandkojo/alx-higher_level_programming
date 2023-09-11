@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""This module contains only one function"""
+"""This module has one function"""
 
 
-def is_same_class(obj, a_class):
-   """Checks if the object is an instance of the specified class"""
-   return isinstance(obj, a_class)
+def is_kind_of_class(obj, a_class):
+    """ckeck if an obj is instance of a class"""
+    return isinstance(obj, a_class)
