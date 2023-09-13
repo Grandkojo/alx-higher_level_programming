@@ -15,7 +15,7 @@ class Student():
         """Returns a dict repr of a Student"""
         if attrs is None:
             attrs = self.__dict__.keys()
-        jsonrepr = {k: v for k, v in self.__dict__.items() if not k.startswith("__")}
+        jsonrepr = {k: v for k, v in self.__dict__.items() if k in attrs}
         return jsonrepr
     def reload_from_json(self, json):
         """Replaces all attributes with json attributes"""
