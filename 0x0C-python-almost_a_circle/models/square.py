@@ -13,5 +13,15 @@ class Square:
 
     def __str__(self):
         """string representation of the square"""
-        square_name = "[Square] {()} {()}/{()} - {}".format(self.id, self.x, self.y, self.width)
+        square_name = "[Square] {()} {()}/{()} - {}".format(self.id, self.x, self.y, self.size)
         return square_name
+
+    @property
+    def size(self):
+        """The getter and setter for size"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+        self.height = value
