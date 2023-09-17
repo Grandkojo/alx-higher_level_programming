@@ -8,4 +8,9 @@ from .rectangle import Rectangle
 class Square:
     """The square class that inherits from the Rectangle class"""
     def __init__(self, size, x=0, y=0, id=None):
-        """The initalizor of the square class"""
+        """The initializor of the square class"""
+        super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        """string representation of the square"""
+        square_rep = "[Square] {()} {()}/{()} - {}".format(self.id, self.x, self.y, self.size)
