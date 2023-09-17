@@ -39,3 +39,8 @@ class Square:
             for key, value in kwargs.items():
                 if key in square_attributes:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """The dictionary representation of the square"""
+        dict_rep = {'id': self.id, 'size': self.size, 'x': x, 'y': y}
+        return dict_rep
