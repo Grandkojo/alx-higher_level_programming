@@ -13,4 +13,5 @@ class Square:
 
     def __str__(self):
         """string representation of the square"""
-        square_rep = "[Square] {()} {()}/{()} - {}".format(self.id, self.x, self.y, self.size)
+        square_name = "[Square] {()} {()}/{()} - {}".format(self.id, self.x, self.y, self.width)
+        return square_name
