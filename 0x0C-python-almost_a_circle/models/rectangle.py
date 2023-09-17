@@ -87,10 +87,11 @@ class Rectangle(Base):
         """The update method of the rectangle"""
         attributes = ['id', 'width', 'height', 'x', 'y']
         if args:
-            for i, args in enumerate(args):
+            for i, arg in enumerate(args):
                 if i == 5:
                     break
-            setattr(self, attributes[i], args)
+            setattr(self, attributes[i], arg)
         elif kwargs:
 	for key, value in kwargs.items():
-	    setattr(self, key, value)
+            if key in attibutes:
+	        setattr(self, key, value)

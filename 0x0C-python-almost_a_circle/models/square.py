@@ -25,3 +25,17 @@ class Square:
     def size(self, value):
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """The update function of the square class"""
+        square_attributes = ['id', 'size', 'x', 'y']
+        if args:
+            for i, arg in enumerate(args):
+                if i == 4:
+                    break
+        setattr(self, square_attributes[i], arg)
+
+        elif kwargs:
+            for key, value in kwargs.items():
+                if key in square_attributes:
+                    setattr(self, key, value)
