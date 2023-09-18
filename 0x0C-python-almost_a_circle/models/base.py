@@ -11,8 +11,8 @@ class Base:
         if id is not None:
             self.id = id
         else:
-           Base. __nb_objects += 1
-           self.id = Base.__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -30,7 +30,7 @@ class Base:
         with open(f'{cls.__name__}.json', 'w') as f:
             list_dictionary = []
             if list_objs:
-                for obj n list_objs:
+                for obj in list_objs:
                     list_dictionary.append(obj.to_dictionary())
             f.write(cls.to_json_string(list_dictionary))
 
@@ -46,10 +46,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """This creates a new instance of the calling class"""
-        temporary = None
-        if cls.__name__ = "Rectangle":
+        temp = None
+        if cls.__name__ == "Rectangle":
             temp = cls(2, 3)
-        elif cls.__name__ = "Square":
+        elif cls.__name__ == "Square":
             temp = cls(4)
         temp.update(**dictionary)
         return temp
@@ -64,6 +64,7 @@ class Base:
                 list_dict = cls.from_json_string(f.read())
                 for dic in list_dict:
                     res.append(cls.create(**dic))
-            return res
+                return res
         except Exception:
             return []
+
