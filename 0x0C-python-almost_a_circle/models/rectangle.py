@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""This modules has one class that inherits from base"""
+"""This module has one class that inherits from base"""
 
 
 from .base import Base
 
 
 class Rectangle(Base):
-    """This is the rectangle class that inherits from the Base class"""
+    """This is the Rectangle class that inherits from the Base class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """The iitializer or constructor function"""
+        """The initializer or constructor function"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -24,7 +24,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
-            raise TypeError("width must be integer")
+            raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
@@ -37,7 +37,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
-            raise TypeError("height must be integer")
+            raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
@@ -50,10 +50,10 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         if not isinstance(value, int):
-            raise TypeError("x must be integer")
-        if value <= 0:
+            raise TypeError("x must be an integer")
+        if value < 0:
             raise ValueError("x must be >= 0")
-        self.___x = value
+        self.__x = value
 
     @property
     def y(self):
@@ -63,40 +63,41 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         if not isinstance(value, int):
-            raise TypeError("y must be integer")
-        if value <= 0:
+            raise TypeError("y must be an integer")
+        if value < 0:
             raise ValueError("y must be >= 0")
-        self.___y = value
+        self.__y = value
 
     def area(self):
-        """The area of the rectangle instance"""
-        return (self.height * self.width)
+        """The area of the Rectangle instance"""
+        return self.height * self.width
 
     def display(self):
-        """Prints the rectangle with #"""
-        print("\n" * self.y, end="") 
+        """Prints the Rectangle with #"""
+        print("\n" * self.y, end="")
         for i in range(self.height):
             print(" " * self.x + "#" * self.width)
 
     def __str__(self):
-        """string representation of rectangle instance"""
-        rect_name = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width,        self.height)
+        """String representation of Rectangle instance"""
+        rect_name = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
         return rect_name
 
     def update(self, *args, **kwargs):
-        """The update method of the rectangle"""
+        """The update method of the Rectangle"""
         attributes = ['id', 'width', 'height', 'x', 'y']
         if args:
             for i, arg in enumerate(args):
                 if i == 5:
                     break
-            setattr(self, attributes[i], arg)
+                setattr(self, attributes[i], arg)
         elif kwargs:
-	for key, value in kwargs.items():
-            if key in attibutes:
-	        setattr(self, key, value)
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
 
     def to_dictionary(self):
-        """The dictionary representation of the rectangle class"""
-        dict_rep = {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y':                   self.y}
+        """The dictionary representation of the Rectangle class"""
+        dict_rep = {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
         return dict_rep
+
