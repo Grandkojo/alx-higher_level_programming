@@ -42,5 +42,5 @@ class Square:
 
     def to_dictionary(self):
         """The dictionary representation of the square"""
-        dict_rep = {'id': self.id, 'size': self.size, 'x': x, 'y': y}
+        dict_rep = {'id': self.id, 'size': self.size, 'x':self.x, 'y': self.y}
         return dict_rep
