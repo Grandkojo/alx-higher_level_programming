@@ -42,3 +42,14 @@ class Base:
             return []
         else:
             return json.JSONDecoder().decode(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """This creates a new instance of the calling class"""
+        temporary = None
+        if cls.__name__ = "Rectangle":
+            temp = cls(2, 3)
+        elif cls.__name__ = "Square":
+            temp = cls(4)
+        temp.update(**dictionary)
+        return temp
