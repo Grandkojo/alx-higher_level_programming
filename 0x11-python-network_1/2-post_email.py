@@ -3,12 +3,13 @@
 
 import sys
 import urllib.request
+import urllib.parse
 
 if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
     values = {'email': email}
-    data = url.parse.urlencode(values)
+    data = urllib.parse.urlencode(values)
     data = data.encode('ascii')
     request = urllib.request.Request(data, url)
     with url.request.urlopen(request) as response:
