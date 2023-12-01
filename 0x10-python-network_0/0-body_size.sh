@@ -1,3 +1,3 @@
-#/bin/bash
-#Prints the size of a content in bits
+#!/bin/bash
+# This script checks the length of the body
 curl -s "$1" | wc -c
