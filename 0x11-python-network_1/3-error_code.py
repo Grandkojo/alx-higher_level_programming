@@ -9,7 +9,7 @@ import urllib.error
 
 if __name__ == "__main__":
     request = sys.argv[1]
-    url = urllib.request.Requezt(url)
+    url = urllib.request.Request(request)
     try:
         with urllib.request.urlopen(url) as response:
             html = response.read()
