@@ -13,4 +13,4 @@ if __name__ == "__main__":
         url.raise_for_status()
         print(url.text)
     except requests.exceptions.HTTPError as e:
-        print(f"Error code {e.status_code}")
+        print(f"Error code: {e.status_code}")
