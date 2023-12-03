@@ -10,13 +10,13 @@ if __name__ == "__main__":
         q = sys.argv[1]
     else:
         q = ""
-        load = {'q': q}
-        html = requests.post(url, data=load)
-        try:
-            jsonrep = html.json()
-            if jsonrep:
-                print(f"[{jsonrep.get('id')}] {jsonrep.get('name')}")
-            else:
-                print("No result")
-        except ValueError:
-            print("Not a valid JSON")
+    load = {'q': q}
+    html = requests.post(url, data=load)
+    try:
+        jsonrep = html.json()
+        if jsonrep:
+            print(f"[{jsonrep.get('id')}] {jsonrep.get('name')}")
+        else:
+            print("No result")
+    except ValueError:
+        print("Not a valid JSON")
