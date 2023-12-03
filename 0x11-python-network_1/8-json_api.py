@@ -19,4 +19,4 @@ if __name__ == "__main__":
             else:
                 print("No result")
         except ValueError:
-            print("Not a vslid JSON")
+            print("Not a valid JSON")
