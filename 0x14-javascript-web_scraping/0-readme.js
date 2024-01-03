@@ -11,7 +11,7 @@ if (!filePath) {
 
 fs.readFile(filePath, 'utf-8', (err, data) => {
   if (err) {
-    console.log(err);
+    console.error(err);
     return;
   }
   return console.log(data);
