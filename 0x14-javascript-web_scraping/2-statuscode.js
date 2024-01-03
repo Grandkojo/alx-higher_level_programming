@@ -3,9 +3,10 @@
 const requestMod = require('request');
 const requestArg = process.argv[2];
 
-requestMod(requestArg, function (err, response, body) {
-  if (err) {
-    console.error('Error: ', err);
+requestMod(requestArg, function (error, response, body) {
+  if (error) {
+    console.error('Error: ', error);
+	  return;
   }
-  console.log('code: ', response.statusCode);
+  return console.log('code:', response.statusCode);
 });
