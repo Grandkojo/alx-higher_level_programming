@@ -6,6 +6,7 @@ const requestStarwars = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
 if (!movieId) {
   console.log(`${process.argv[1]} <movieId>`);
+  process.exit(1);
 }
 
 request(requestStarwars, { json: true }, function (error, response, body) {
