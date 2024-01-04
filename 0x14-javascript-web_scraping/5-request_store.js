@@ -5,7 +5,7 @@ const fs = require('fs');
 const reqPage = process.argv[2];
 const filePath = process.argv[3];
 
-request(reqPage, { json: true }, function (error, response, body) {
+request(reqPage, function (error, response, body) {
   if (error) {
     console.error(error);
     process.exit(1);
