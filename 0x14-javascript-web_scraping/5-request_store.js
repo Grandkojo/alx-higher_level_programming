@@ -17,13 +17,10 @@ request(reqPage, { json: true }, function (error, response, body) {
     console.error(error);
     process.exit(1);
   } else {
-    //const store = JSON.stringify(body); // Convert JSON to string
     const store = body;
     fs.writeFile(filePath, store, 'utf-8', (error) => {
       if (error) {
         console.error(error);
-      } else {
-        console.log('File written successfully...');
       }
     });
   }
